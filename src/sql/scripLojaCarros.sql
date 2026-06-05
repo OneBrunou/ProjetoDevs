@@ -15,7 +15,7 @@ Id int primary key auto_increment,
 Nome varchar(50) not null,
 Email varchar (80) not null,
 Senha varchar (150) not null,
-Telefone int default  ('n/a'),
+Telefone varchar (15) default('n/a'),
 Nivel varchar (20) default ('Usuario')
 );
 
@@ -60,3 +60,54 @@ Henrique_n int default ('Não teve nota'),
 Igor_n int default ('Não teve nota'),
 Bruno_n int default ('Não teve nota')
 );
+
+
+-- criando a tabela de dados mortos
+drop table if exists tb_usuario_apagado;
+
+create table tb_usuario_apagado(
+    Id int,
+    Nome varchar(50),
+    Email varchar(80),
+    Senha varchar(150),
+    Telefone varchar(15) default ('n/a'),
+    Nivel varchar(20),
+    Data_apagada datetime default current_timestamp
+);
+
+-- criando o trigger para fazer a função de enviar as informações do usuario deletado
+-- para a tabela morta
+delimiter //
+
+create trigger trg_arquivar_usuario
+before delete on tb_usuario
+for each row
+begin
+
+    insert into tb_usuario_apagado
+    (Id, Nome, Email, Senha, Telefone, Nivel)
+
+    values
+    (
+        OLD.Id,
+        OLD.Nome,
+        OLD.Email,
+        OLD.Senha,
+        OLD.Telefone,
+        OLD.Nivel
+    );
+
+end //
+delimiter ;
+
+
+-- acessos para os admins
+insert into tb_usuario (Nome, Email, Senha, Nivel)
+values ('adimin','adm@email.com','123','Admin');
+
+insert into tb_usuario (Nome, Email, Senha, Nivel)
+values ('devB','oneadm@email.com','@@..', 'Admin');
+
+
+select*from tb_usuario;
+select*from tb_usuario_apagado;
