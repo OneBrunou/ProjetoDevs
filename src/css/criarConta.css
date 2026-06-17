@@ -1,0 +1,178 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    body {
+      min-height: 100vh;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+ 
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+    }
+ 
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.8rem;
+    }
+ 
+    .logo-wrap img { height: 52px; width: auto; }
+ 
+    h1 {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+ 
+    .subtitle {
+      color: #666;
+      font-size: 0.82rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+ 
+    .alert {
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+ 
+    .alert-erro    { background: #2a0f0f; color: #f87171; border: 1px solid #7f1d1d; }
+    .alert-sucesso { background: #0f2a14; color: #4ade80; border: 1px solid #14532d; }
+ 
+    .field { margin-bottom: 1.1rem; }
+ 
+    label {
+      display: block;
+      color: #aaa;
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+ 
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+      width: 100%;
+      background: #1a1a1a;
+      border: 1px solid #2e2e2e;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 0.92rem;
+      padding: 0.65rem 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+ 
+    input:focus, select:focus { border-color: #555; }
+    input::placeholder { color: #444; }
+ 
+    /* Linha com dois campos lado a lado */
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+    }
+ 
+    /* Seletor de sexo estilizado */
+    .radio-group {
+      display: flex;
+      gap: 0.8rem;
+    }
+ 
+    .radio-group label {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: #1a1a1a;
+      border: 1px solid #2e2e2e;
+      border-radius: 6px;
+      padding: 0.6rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #aaa;
+      transition: border-color 0.2s, color 0.2s;
+    }
+ 
+    .radio-group input[type="radio"] { display: none; }
+ 
+    .radio-group input[type="radio"]:checked + span {
+      color: #fff;
+    }
+ 
+    .radio-group label:has(input:checked) {
+      border-color: #555;
+      color: #fff;
+    }
+ 
+    /* hint de limite */
+    .hint {
+      font-size: 0.72rem;
+      color: #444;
+      margin-top: 4px;
+    }
+ 
+    .btn {
+      width: 100%;
+      margin-top: 0.6rem;
+      padding: 0.75rem;
+      background: #fff;
+      color: #0a0a0a;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: opacity 0.2s;
+    }
+ 
+    .btn:hover { opacity: 0.88; }
+ 
+    .divider {
+      text-align: center;
+      color: #333;
+      font-size: 0.78rem;
+      margin: 1.3rem 0;
+      position: relative;
+    }
+ 
+    .divider::before, .divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 38%;
+      height: 1px;
+      background: #222;
+    }
+    .divider::before { left: 0; }
+    .divider::after  { right: 0; }
+ 
+    .login-link { text-align: center; font-size: 0.83rem; color: #555; }
+    .login-link a { color: #aaa; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+    .login-link a:hover { color: #fff; }
+ 
+    /* cor do calendário nativo */
+    input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); cursor: pointer; }
