@@ -14,7 +14,26 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
+ 
+.header-cta {
+      background: #fff;
+      color: #0a0a0a;
+      border: none;
+      padding: 0.45rem 1.2rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+      text-decoration: none;
+     
+ }
+ 
+    .header-cta:hover { 
+      opacity: 0.85;
+     }
+ 
 .login-container {
     background-color: #222222;
     padding: 2.5rem;
@@ -102,7 +121,7 @@ body {
     color: #888888;
 }
 
-a[href="#"] {
+.Create{
     display: block;
     text-align: center;
     margin-top: 0.5rem;
@@ -113,7 +132,7 @@ a[href="#"] {
     transition: color 0.3s ease;
 }
 
-a[href="#"]:hover {
+.Create:hover {
     text-decoration: underline;
     color: #aaaaaa;
 }
