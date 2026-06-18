@@ -28,10 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </script>";
 
     } catch (PDOException $e) {
+
         echo "Erro ao salvar no banco de dados: " . $e->getMessage();
     }
 } else {
     // Se tentarem acessar o arquivo PHP diretamente pelo navegador, joga de volta para o HTML
+=======
+        echo "Erro no banco de dados: " . $e->getMessage();
+    }
+} else {
+
     header("Location: CriarConta.html");
     exit();
 }
