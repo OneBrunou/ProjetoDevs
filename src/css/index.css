@@ -8,12 +8,20 @@
     header {
       background-color: #000000;
       padding: 0 2.5rem;
+      height: 90px;
       height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #1f1f1f;
       position: relative;
+    }
+ 
+    .logo img 
+    {
+     align-items: center;
+     width: 100%;
+     height: 80px;
     }
    .btn-cmc
   {
@@ -35,7 +43,7 @@
       width: 100%;
       /* logo tem fundo preto, então deixamos ela visível normalmente */
     }
- 
+
     nav {
       display: flex;
       align-items: center;
