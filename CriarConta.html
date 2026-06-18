@@ -1,35 +1,35 @@
 <!doctype HTML>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width;height=device-height;initial-scale=1.0"/>
-		<link rel="stylesheet" type="text/css" href="CriarConta.css"/>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="src/css/criarConta.css"/>
         <title>Criar Conta</title>
-	</head>
-	<body>
-        <h1>Criar Conta</h1>
-     <hr>
-    </br>
-		<form name="form1" method="post" action="criarConta.php">
-		    <label for="txtnome">Nome: </label>
-            <input type="text" name="txtnome" id="txtnome" maxlength=40 required />
-		    <br/><br/>
+    </head>
+    <body>
+
+        <form name="form1" method="post" action="criarConta.php">
+              <h1 class="title">Criar Conta</h1>
+            <label for="txtnome">Nome: </label>
+            <input type="text" name="txtnome" id="txtnome" maxlength="50" required />
+            <br/><br/>
+            
             <label for="txtemail">E-mail:</label>
-            <input type="email" name="txtemail" id="txtemail" maxlength=40 required />
+            <input type="email" name="txtemail" id="txtemail" maxlength="80" required />
             <br/><br/>
+            
             <label for="txtsenha">Senha:</label>
-            <input type="password" name="txtsenha" id="txtsenha" maxlength=8 />
+            <input type="password" name="txtsenha" id="txtsenha" maxlength="150" required />
             <br/><br/>
-            <label for="txtsexo">Sexo:</label>
-            <input type="radio" value="F" name="txtsexo" id="txtsexof" checked/>F
-		    <input type="radio" value="M" name="txtsexo" id="txtsexom"/>M
+
+            <label for="consenha">Confirme sua senha</label>
+                <input type="password" name="txtconfirm" id="txtconfirm" maxlength="150" required />
             <br/><br/>
-            <label for="txtdata">Data:</label>
-            <input type="date" name="txtdata" id="txtdata" />
-            <br/><br/><br/>
+            
             <input type="submit" value="Cadastrar" />
             <input type="reset" value="Limpar" onClick="document.getElementById('txtnome').focus();" />
             <input type="button" value="Home" onClick="location.href='index.html'"/>
-		</form>
-	</body>
+        </form>
+
+    </body>
 </html>

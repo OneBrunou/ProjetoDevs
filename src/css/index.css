@@ -1,5 +1,8 @@
-  * { margin: 0; padding: 0; box-sizing: border-box; }
- 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
       background: #000000;
@@ -44,27 +47,6 @@
       /* logo tem fundo preto, então deixamos ela visível normalmente */
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
- 
-    nav a {
-      text-decoration: none;
-      color: #aaa;
-      font-size: 0.875rem;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
-    }
- 
-    nav a:hover { 
-      color: #fff;
-     }
-    nav a.active { 
-      color: #fff; 
-    }
- 
     .header-cta {
       background: #fff;
       color: #0a0a0a;
@@ -94,7 +76,45 @@
     .page-content h2 { 
       color: #222; margin-bottom: 0.5rem; font-size: 1.6rem; 
     }
-    
+ 
+
+/* Deixa o container ocupando a tela inteira */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fixa o vídeo no fundo */
+#meu-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Joga o vídeo para trás */
+    object-fit: cover; /* Faz o vídeo cobrir toda a tela sem distorcer */
+}
+
+/* Estiliza o seu conteúdo por cima do vídeo */
+.conteudo {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: sans-serif;
+}
+
+    .legenda
+    {
+      color: #ffffff;
+    }
  .title
     {
       color: #ffffff;
