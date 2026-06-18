@@ -94,3 +94,62 @@
     .page-content h2 { 
       color: #222; margin-bottom: 0.5rem; font-size: 1.6rem; 
     }
+    
+ .title
+    {
+      color: #ffffff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    .devs-section {
+            margin-top: 50px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .devs-section h2 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .devs-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .dev-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .dev-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ddd; /* Cor de fundo caso não tenha imagem */
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .dev-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .dev-role {
+            font-size: 12px;
+            color: #ffffff;
+        }
