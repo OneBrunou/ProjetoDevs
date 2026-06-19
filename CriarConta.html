@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width;height=device-height;initial-scale=1.0"/>
-		<link rel="stylesheet" type="text/css" href="CriarConta.css"/>
+		<link rel="stylesheet" type="text/css" href="src/css/CriarConta.css"/>
         <title>Criar Conta</title>
 	</head>
 	<body>
@@ -20,14 +20,8 @@
             <label for="txtsenha">Senha:</label>
             <input type="password" name="txtsenha" id="txtsenha" maxlength=8 />
             <br/><br/>
-            <label for="txtsexo">Sexo:</label>
-            <input type="radio" value="F" name="txtsexo" id="txtsexof" checked/>F
-		    <input type="radio" value="M" name="txtsexo" id="txtsexom"/>M
             <br/><br/>
-            <label for="txtdata">Data:</label>
-            <input type="date" name="txtdata" id="txtdata" />
-            <br/><br/><br/>
-            <input type="submit" value="Cadastrar" />
+            <input type="submit" value="Criar Conta" />
             <input type="reset" value="Limpar" onClick="document.getElementById('txtnome').focus();" />
             <input type="button" value="Home" onClick="location.href='index.html'"/>
 		</form>

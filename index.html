@@ -1,39 +1,52 @@
-<!doctype HTML>
+<!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="CriarConta.css"/>
-        <title>Criar Conta</title>
-    </head>
-    <body>
-        <h1>Criar Conta</h1>
-        <hr>
-        <br/>
-        <form name="form1" method="post" action="criarConta.php">
-            <label for="txtnome">Nome: </label>
-            <input type="text" name="txtnome" id="txtnome" maxlength="40" required />
-            <br/><br/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Devs</title>
+    <link rel="stylesheet" href="src/css/index.css">
+  </head>
+  <header>
+    <div class="logo-center">
+      <img src="src/assets/logo.png" alt="Logo Etec Motors" class="logo">
+    </div>
+    <nav>
+        <a href="login.html" class="header-cta">Login</a>
+    </nav>
+
+  </header>
+  <body>
+  </head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline id="meu-video">
+            <source src="src/assets/videoCarro.mp4" type="video/mp4">
             
-            <label for="txtemail">E-mail:</label>
-            <input type="email" name="txtemail" id="txtemail" maxlength="40" required />
-            <br/><br/>
-            
-            <label for="txtsenha">Senha:</label>
-            <input type="password" name="txtsenha" id="txtsenha" maxlength="8" />
-            <br/><br/>
-            
-            <label>Sexo:</label> <input type="radio" value="F" name="txtsexo" id="txtsexof" checked/> <label for="txtsexof">F</label>
-            <input type="radio" value="M" name="txtsexo" id="txtsexom"/> <label for="txtsexom">M</label>
-            <br/><br/>
-            
-            <label for="txtdata">Data:</label>
-            <input type="date" name="txtdata" id="txtdata" />
-            <br/><br/><br/>
-            
-            <input type="submit" value="Cadastrar" />
-            <input type="reset" value="Limpar" onClick="document.getElementById('txtnome').focus();" />
-            <input type="button" value="Home" onClick="location.href='index.html'"/>
-        </form>
-    </body>
+        </video>
+          <div class="conteudo">
+              <h1>Bem-vindo a Etec Motors</h1>
+              <p>Descubra a excelência em automóveis e serviços de alta qualidade.</p>
+          </div>
+    </div>
+    <div class="devs-section">
+        <h2>Nossa Equipe</h2>
+        <div class="devs-container">
+            <div class="dev-card">
+                <div class="dev-avatar" style="background-image: url('src/assets/avatar1.jpg');"></div>
+                <div class="dev-name">Bruno Soares</div>
+                <div class="dev-role">Fullstack developer</div>
+            </div>
+            <div class="dev-card">
+                <div class="dev-avatar" style="background-image: url('src/assets/avatar2.jpg');"></div>
+                <div class="dev-name">Igor Campos</div>
+                <div class="dev-role">Fullstack Developer</div>
+            </div>
+            <div class="dev-card">
+                <div class="dev-avatar" style="background-image: url('src/assets/avatar3.jpg');"></div>
+                <div class="dev-name">Henrique Vincenzo</div>
+                <div class="dev-role">Fullstack Developer</div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>
