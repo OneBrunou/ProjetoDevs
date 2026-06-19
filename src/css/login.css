@@ -136,3 +136,13 @@ body {
     text-decoration: underline;
     color: #aaaaaa;
 }
+login-container .logo-login {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    height: 70px;
+    width: 10px;
+}
+login-container .logo-login:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
