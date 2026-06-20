@@ -8,24 +8,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $vnome  = $_POST['txtnome'] ?? '';
     $vemail = $_POST['txtemail'] ?? '';
     $vsenha = $_POST['txtsenha'] ?? '';
-    $vsexo  = $_POST['txtsexo'] ?? '';
     $vdata  = $_POST['txtdata'] ?? '';
 
     try {
-        // 2. ATENÇÃO: Mude $SUA_VARIAVEL_AQUI para a variável de conexão do seu conexao.php (ex: $conn, $pdo, $conexao)
-        $stmt = $SUA_VARIAVEL_AQUI->prepare("INSERT INTO tb_teste (nome_t, email_t, senh_t, sexo_t, dtna_t) VALUES (:nome, :email, :senha, :sexo, :data)");
+
+        $stmt = $cmd->prepare("INSERT INTO tb_Usuario (Nome, Email, Senha) VALUES (:nome, :email, :senha)");
         
         $stmt->execute([
-            ':nome'  => $vnome,
-            ':email' => $vemail,
-            ':senha' => $vsenha,
-            ':sexo'  => $vsexo,
-            ':data'  => $vdata
+            ':Nome'  => $vnome,
+            ':Email' => $vemail,
+            ':Senha' => $vsenha,
+      
         ]);
 
         echo "<script>
-                alert('Dados cadastrados com sucesso!!!');
-                location.href='CriarConta.html';
+                alert('Conta criada com sucesso!!!');
+                location.href='index.html';
               </script>";
 
     } catch (PDOException $e) {
