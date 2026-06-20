@@ -1,9 +1,10 @@
 <!doctype HTML>
 <html lang="pt-br">
-    <head>
+<head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="src/css/criarConta.css"/>
+
         <title>Criar Conta</title>
     </head>
     <body>
@@ -22,11 +23,16 @@
             <input type="password" name="txtsenha" id="txtsenha" maxlength="150" required />
             <br/><br/>
 
+            <br/><br/>
+            <input type="submit" value="Criar Conta" />
+
+
             <label for="consenha">Confirme sua senha</label>
                 <input type="password" name="txtconfirm" id="txtconfirm" maxlength="150" required />
             <br/><br/>
             
             <input type="submit" value="Cadastrar" />
+
             <input type="reset" value="Limpar" onClick="document.getElementById('txtnome').focus();" />
             <input type="button" value="Home" onClick="location.href='index.html'"/>
         </form>
