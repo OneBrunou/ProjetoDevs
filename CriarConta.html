@@ -1,41 +1,33 @@
 <!doctype HTML>
 <html lang="pt-br">
-<head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="src/css/criarConta.css"/>
-
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width;height=device-height;initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="src/css/criarConta.css"/>
         <title>Criar Conta</title>
-    </head>
-    <body>
+	</head>
+	<body>
+    
+    </br>
+		<form name="form1" method="POST" action="criarConta.php">
+            <div class="logo-center">
+                <img src="src/assets/logo.png" alt="Logo Etec Motors" class="logo-criar-conta">
+            </div>
+            <h1>Criar Conta</h1>
 
-        <form name="form1" method="post" action="criarConta.php">
-              <h1 class="title">Criar Conta</h1>
-            <label for="txtnome">Nome: </label>
-            <input type="text" name="txtnome" id="txtnome" maxlength="50" required />
-            <br/><br/>
-            
+		    <label for="txtnome">Nome: </label>
+            <input type="text" name="txtnome" id="txtnome" maxlength=40 required />
+		    <br/><br/>
             <label for="txtemail">E-mail:</label>
-            <input type="email" name="txtemail" id="txtemail" maxlength="80" required />
+            <input type="email" name="txtemail" id="txtemail" maxlength=40 required />
             <br/><br/>
-            
             <label for="txtsenha">Senha:</label>
-            <input type="password" name="txtsenha" id="txtsenha" maxlength="150" required />
+            <input type="password" name="txtsenha" id="txtsenha" maxlength=8 />
             <br/><br/>
-
             <br/><br/>
-            <input type="submit" value="Criar Conta" />
-
-
-            <label for="consenha">Confirme sua senha</label>
-                <input type="password" name="txtconfirm" id="txtconfirm" maxlength="150" required />
-            <br/><br/>
-            
-            <input type="submit" value="Cadastrar" />
-
+            <input type="submit" value="Criar Conta"/>
             <input type="reset" value="Limpar" onClick="document.getElementById('txtnome').focus();" />
             <input type="button" value="Home" onClick="location.href='index.html'"/>
-        </form>
-
-    </body>
+		</form>
+	</body>
 </html>
