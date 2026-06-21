@@ -1,146 +1,146 @@
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+ 
 body {
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    padding: 20px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
+ 
+/* ── FORMULÁRIO ── */
 form {
-    background-color: #222222;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
+  background: linear-gradient(177deg, #000000, #222222);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
-
-
-.title{
-    color: #ffffff;
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-align: center;
+ 
+/* ── LOGO ── */
+.logo-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
-
-hr {
-    border: 0;
-    height: 1px;
-    background: #e0e0e0;
-    margin-bottom: 25px;
-    width: 100%;
-    max-width: 450px;
+ 
+.logo-criar-conta {
+  height: 60px;
+  width: auto;
 }
-
-
+ 
+/* ── TÍTULO ── */
+h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+ 
+/* ── LABELS ── */
 label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.8rem;
 }
-
-
+ 
+/* ── INPUTS ── */
 input[type="text"],
 input[type="email"],
-input[type="password"],
-input[type="date"] {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #000000;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+input[type="password"] {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.9rem;
+  margin-top: 0.3rem;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
 }
-
-
+ 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus {
-    border-color: #ffffff;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
-    outline: none;
+input[type="password"]:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
 }
-
-
-input[type="radio"] {
-    margin-right: 5px;
-    margin-left: 10px;
-    cursor: pointer;
+ 
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.2);
 }
-
-
-label + input[type="radio"] {
-    margin-left: 0;
+ 
+/* ── BOTÕES ── */
+.botoes {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
 }
-
-
-form br + input[type="submit"],
-form br + input[type="reset"],
-form br + input[type="button"] {
-    margin-top: 10px;
-}
-
-
+ 
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    margin-right: 8px;
-    margin-bottom: 10px;
+  flex: 1;
+  padding: 0.55rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s, box-shadow 0.2s;
 }
-
-
+ 
 input[type="submit"] {
-    background-color: #000000;
-    color: white;
+  background: #ffffff;
+  color: #0a0a0a;
 }
-
-
-/* Botão Limpar */
+ 
+input[type="submit"]:hover {
+  opacity: 0.88;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+ 
 input[type="reset"] {
-    background-color: #e74c3c;
-    color: white;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #333;
 }
-
+ 
 input[type="reset"]:hover {
-    background-color: #c0392b;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
 }
-
-/* Botão Menu */
+ 
 input[type="button"] {
-    background-color: #34495e;
-    color: white;
-    margin-right: 0; /* Último botão não precisa de margem na direita */
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #333;
 }
-
+ 
 input[type="button"]:hover {
-    background-color: #2c3e50;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
 }
-
-/* Efeito de clique em todos os botões */
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active {
-    transform: scale(0.98);
-}
+ 
+/* ── REMOVE br extras ── */
+br { display: none; }
+ 
