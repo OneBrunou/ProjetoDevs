@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body
+{
+    background-color: #000000;
+}
+
+/* Barra de Navegação - Fundo Grafite Escuro Neutro */
+.navbar {
+    background-color: #000000; 
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #343a40;
+}
+
+/* Container centralizador */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Box da Logo para controlar o tamanho da imagem */
+.nav-logo-box {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo-img {
+    height: 45px; /* Ajuste a altura da logo conforme achar melhor */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Lista de Links do Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #f8f9fa; /* Branco gelo neutro */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+/* Hover Neutro (Cinza Médio) */
+.nav-link:hover {
+    color: #ffffff;
+    background-color: #343a40; 
+}
+
+/* Área do Usuário */
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-name {
+    color: #adb5bd; /* Cinza claro discreto */
+    font-size: 14px;
+}
+
+.user-name strong {
+    color: #f8f9fa;
+}
+
+/* Botão Sair - Estilo Clean Neutro */
+.btn-logout {
+    background-color: transparent;
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #495057; /* Borda sutil */
+    transition: all 0.2s ease;
+}
+
+/* Inverte as cores no hover do botão sair */
+.btn-logout:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+    border-color: #f8f9fa;
+}
+h1
+{
+    text-align: center;
+    margin-top: 50px;
+    color: #ffffff;
+}
+p
+{
+    text-align: center;
+    margin-top: 20px;
+    color: #495057;
+    font-size: 18px;
+}
