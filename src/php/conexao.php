@@ -1,17 +1,7 @@
-PHP
 <?php
 $host = 'localhost';
 $dbname = 'db_loja_carros';
 $username = 'root';
-$password = ''; // se tiver senha no XAMPP, coloque aqui
-
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e)
-
-{
-    echo "Erro na conexão: " . $e->getMessage();
-    die();
-}
+$password = '12345678'; 
+$cmd= new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
 ?>
