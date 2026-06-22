@@ -19,18 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // 2. Validação de formato de e-mail correto (ex: usuario@dominio.com)
-    if (!filter_var($vemail, FILTER_VALIDATE_EMAIL)) {
-        echo "<script>
-                alert('O e-mail digitado não é válido. Verifique a grafia.');
-                history.back();
-              </script>";
-        exit();
-    }
+ 
 
     try {
         // 3. Verificação no Banco de Dados: O e-mail já existe?
-        $stmtCheck = $conn->prepare("SELECT COUNT(*) FROM tb_usuario WHERE Email = :email");
+        $stmtCheck = $cmd->prepare("SELECT COUNT(*) FROM tb_usuario WHERE Email = :email");
         $stmtCheck->execute([':email' => $vemail]);
         
         if ($stmtCheck->fetchColumn() > 0) {
@@ -43,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // 4. Se passou em todas as validações, realiza o cadastro
-        $stmt = $conn->prepare("INSERT INTO tb_usuario (Nome, Email, Senha, Telefone) VALUES (:nome, :email, :senha, :telefone)");
+        $stmt = $cmd->prepare("INSERT INTO tb_usuario (Nome, Email, Senha, Telefone) VALUES (:nome, :email, :senha, :telefone)");
         
         $stmt->execute([
             ':nome'     => $vnome,
@@ -55,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Alerta de Sucesso
         echo "<script>
                 alert('Usuário cadastrado com sucesso!!!');
-                location.href='criarConta.php';
+                location.href='../../index.html';
               </script>";
         exit();
 
