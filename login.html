@@ -5,43 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../ProjetoDevs/src/css/login.css">
     <title>Projeto Devs</title>
-  
   </head>
  
- <body>
-
-<div class="login-container">
-  <div class="logo-center">
-    <img src="src/assets/logoCinza.png" alt="Logo Etec Motors" class="logo-login">
-  </div>
-    <h2>Bem vindo!</h2>
-    <div class="links">
-            <a >Faça Login abaixo</a>
-    </div>
+  <body>
+    <div class="login-container">
+      <div class="logo-center">
+        <img src="src/assets/logoCinza.png" alt="Logo Etec Motors" class="logo-login">
+      </div>
+      <h2>Bem vindo!</h2>
+      <div class="links">
+        <a>Faça Login abaixo</a>
+      </div>
       <br>
-    <form action="src/php/login.php" method="post">
+      
+      <form action="src/php/login.php" method="post">
         <div class="input-group">
             <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            <input type="email" id="email" name="txtemail" placeholder="Digite seu e-mail" required>
         </div>
 
         <div class="input-group">
             <label for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="Digite sua senha" required>
+            <input type="password" id="senha" name="txtsenha" placeholder="Digite sua senha" required>
         </div>
 
-        <button type="submit" class="login-btn" href="registros.php">Entrar</button>
+        <button type="submit" class="login-btn">Entrar</button>
 
         <div class="links">
-            <a >Não Possui conta? Clique abaixo para Criar uma conta</a>
+            <a>Não Possui conta? Clique abaixo para Criar uma conta</a>
         </div>
-          <a href="criarConta.html" class="Create">Criar Conta</a>
-    </form>
+        <a href="criarConta.html" class="Create">Criar Conta</a>
+      </form>
+      
       <div class="btn-cmc">
-            <a href="index.html" class="header-cta">Voltar</a>
-       </div>
-</div>
-
-</body>
+        <a href="index.html" class="header-cta">Voltar</a>
+      </div>
+    </div>
+  </body>
 </html>
-

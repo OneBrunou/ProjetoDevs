@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Alerta de Sucesso
         echo "<script>
                 alert('Usuário cadastrado com sucesso!!!');
-                location.href='../../index.html';
+                location.href='../../login.html';
               </script>";
         exit();
 
