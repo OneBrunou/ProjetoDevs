@@ -1,0 +1,211 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS (Fundo Preto / Dark)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #121214; /* Fundo Preto/Grafite muito escuro moderno */
+    color: #f8f9fa; /* Texto geral claro para dar contraste */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 { 
+    font-size: 2.4rem; 
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+}
+
+h2 { 
+    font-size: 1.8rem; 
+    margin-top: 50px; 
+    color: #ffffff;
+    font-weight: 600;
+    width: 100%;
+    max-width: 1100px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #29292e; /* Linha divisória sutil para o fundo escuro */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0 35px 0;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DO FORMULÁRIO (Div de Input Cinza)
+   ========================================================================== */
+form {
+    background: #202024; /* Div do Input em Cinza Escuro (Padrão Etec/Tech) */
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra marcante para destacar no preto */
+    border: 1px solid #29292e;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-weight: 600;
+    color: #c4c4cc; /* Texto cinza claro para a leitura no fundo escuro */
+    font-size: 0.95rem;
+}
+
+form input[type="text"] {
+    padding: 14px 16px;
+    border: 2px solid #29292e;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    outline: none;
+    background-color: #121214; /* Fundo do input combinando com a página */
+    color: #ffffff;
+}
+
+form input[type="text"]:focus {
+    border-color: #ffffff; /* Borda acende em branco no foco */
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+form a {
+    text-decoration: none;
+    width: 100%;
+}
+
+/* ==========================================================================
+   BOTÕES
+   ========================================================================== */
+input[type="submit"], 
+input[type="button"] {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Botão Excluir (Branco Sólido com escrita escura) */
+input[type="submit"] {
+    background-color: #ffffff;
+    color: #121214;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+input[type="submit"]:hover {
+    background-color: #e1e1e6;
+    transform: translateY(-2px);
+}
+
+/* Botão Menu / Voltar (Cinza escuro com borda sutil) */
+input[type="button"] {
+    background-color: #29292e;
+    color: #ffffff;
+    border: 1px solid #323238;
+}
+
+input[type="button"]:hover {
+    background-color: #323238;
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active, 
+input[type="button"]:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   TABELA DE REGISTROS (Branca com Letras Escuras)
+   ========================================================================== */
+table {
+    width: 100%;
+    max-width: 1100px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff; /* Tabela 100% Branca */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+/* Cabeçalho Principal (Dados Cadastrados) */
+th[colspan="6"] {
+    background-color: #f0f0f4; /* Cinza bem clarinho no topo da tabela */
+    color: #121214; /* Texto escuro */
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e1e1e6;
+}
+
+/* Subcabeçalho com os nomes das colunas */
+tr:nth-child(2) th {
+    background-color: #ffffff;
+    color: #212529; /* Texto escuro */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e1e1e6;
+}
+
+/* Linhas de dados internas (Texto escuro sobre o fundo branco) */
+tbody tr {
+    color: #212529;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+/* Efeito Zebra Neutro na Tabela Branca */
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Efeito Hover interno na tabela branca */
+table tr:hover {
+    background-color: #f1f3f5;
+    cursor: default;
+}
+
+/* Coluna do ID */
+td:first-child {
+    font-weight: 700;
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-right: 1px solid #f0f0f4;
+    text-align: center;
+}
+
+/* Coluna Nível */
+td:last-child
+{
+    font-weight: 600;
+}
