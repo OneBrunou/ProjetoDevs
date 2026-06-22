@@ -1,9 +1,9 @@
 <?php
 
-    echo "<link rel='stylesheet' type='text/css' href='src/css/registro.css'/>";
+    echo "<link rel='stylesheet' type='text/css' href='../../src/css/registro.css'/>";
     include 'conexao.php';
 
-    $resultado = $cmd->query("SELECT * FROM tb_Usuario");
+    $resultado = $cmd->query("SELECT * FROM tb_usuario");
     $total_registros = $resultado->rowCount();
 
     if ($total_registros > 0)
@@ -47,7 +47,7 @@
 
         echo "</table>";
         echo "<br/><br/><br/>";
-        echo "<a href='../..//index.html'>Home</a>";
+        echo "<a href='../../menu.html'>Menu</a>";
         echo "</body>";
     }
     else
